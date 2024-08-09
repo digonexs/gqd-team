@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navMenu = document.querySelector("nav");
 
   menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("menu-open"); // Use a classe correta
-    menuToggle.classList.toggle("active"); // Para animação do botão
+    navMenu.classList.toggle("menu-open");
+    menuToggle.classList.toggle("active"); // Adiciona animação ao botão
   });
 });

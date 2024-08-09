@@ -499,7 +499,7 @@ footer a:hover {
   }
 
   /* Estilo para o menu aberto */
-  .menu-open {
+  nav.menu-open {
     display: flex; /* Mostra o menu quando a classe .menu-open é adicionada */
   }
 
