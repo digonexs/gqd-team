@@ -39,13 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Menu Hambúrguer
-  const menuToggle = document.createElement("div");
-  menuToggle.className = "menu-toggle";
-  menuToggle.innerHTML = "<div></div><div></div><div></div>";
-  document.querySelector("header").appendChild(menuToggle);
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("nav");
 
-  const navMenu = document.querySelector("nav ul");
   menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
+    navMenu.classList.toggle("menu-open"); // Use a classe correta
+    menuToggle.classList.toggle("active"); // Para animação do botão
   });
 });
