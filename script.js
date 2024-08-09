@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 
-  // Adiciona animações de scroll
   window.addEventListener("scroll", () => {
     document.querySelectorAll(".fade-in").forEach((el) => {
       if (el.getBoundingClientRect().top < window.innerHeight) {
@@ -22,16 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Adiciona rolagem suave ao clicar nos links do menu de navegação
   document.querySelectorAll("nav ul li a").forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
       const targetId = this.getAttribute("href");
       const targetElement = document.querySelector(targetId);
-      // Verifica se o link é para a seção de planos
       if (targetId === "#plans") {
-        // Adiciona um deslocamento adicional para garantir que o plano e o hero sejam exibidos
-        const offset = 50; // ajuste conforme necessário
+        const offset = 50;
         window.scrollTo({
           top: targetElement.offsetTop - offset,
           behavior: "smooth",
@@ -40,5 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
         targetElement.scrollIntoView({ behavior: "smooth" });
       }
     });
+  });
+
+  // Menu Hambúrguer
+  const menuToggle = document.createElement("div");
+  menuToggle.className = "menu-toggle";
+  menuToggle.innerHTML = "<div></div><div></div><div></div>";
+  document.querySelector("header").appendChild(menuToggle);
+
+  const navMenu = document.querySelector("nav ul");
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
   });
 });

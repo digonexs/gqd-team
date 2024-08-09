@@ -442,3 +442,99 @@ footer a:hover {
     flex-direction: column;
   }
 }
+
+/* Estilos para o menu hambúrguer */
+.menu-toggle {
+  display: none; /* Esconde o botão por padrão */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle div {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mostrar o botão hambúrguer em dispositivos móveis */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Mostra o botão hambúrguer em telas menores */
+  }
+
+  nav {
+    display: none; /* Esconde o menu por padrão em dispositivos móveis */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #17494b;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: 0;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+  }
+
+  nav ul li a:hover {
+    background: #26787b;
+  }
+
+  /* Estilo para o menu aberto */
+  .menu-open {
+    display: flex; /* Mostra o menu quando a classe .menu-open é adicionada */
+  }
+
+  .menu-toggle.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .menu-toggle.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+/* Certifique-se de que outras seções também são responsivas */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 20px; /* Ajuste o tamanho do texto do título para telas menores */
+  }
+
+  .container.bio,
+  .plans {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .photo-frame {
+    width: 150px;
+    height: 150px;
+  }
+
+  .plan-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
