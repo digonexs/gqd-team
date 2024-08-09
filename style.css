@@ -1,0 +1,444 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Geral */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background: #f4f4f4;
+}
+
+/* Header */
+header {
+  background: #17494b;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+header h1 img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: #26787b;
+  border-radius: 5px;
+}
+
+/* Seção Sobre Mim */
+#about {
+  display: flex;
+  flex-direction: column; /* Adiciona flex-direction para coluna */
+  align-items: center;
+  padding: 50px 20px;
+  background: #ffffff;
+  position: relative;
+}
+
+.abstract-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  /* Adicione aqui qualquer estilo adicional para o fundo abstrato */
+}
+
+.container.bio {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.photo-frame {
+  position: relative;
+  width: 250px; /* Ajustado para um tamanho maior */
+  height: 250px; /* Ajustado para um tamanho maior */
+  border-radius: 50%; /* Faz a moldura circular */
+  border: 5px solid rgba(0, 255, 0, 0.5); /* Borda verde com opacidade */
+  box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.5); /* Sombra verde para efeito pulsante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 2s infinite; /* Animação pulsante */
+  overflow: hidden; /* Garante que a imagem não ultrapasse a moldura */
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir toda a moldura */
+  border-radius: 50%; /* Faz a imagem circular também */
+}
+
+.bio-text {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bio-text h2 {
+  margin-top: 0;
+  color: #26787b;
+}
+
+.highlight {
+  color: #26787b;
+  font-weight: bold;
+}
+
+.highlight2 {
+  color: black;
+  font-weight: bold;
+}
+
+#title-social {
+  text-align: center;
+  color: #26787b;
+}
+
+.line {
+  border: 1px solid rgba(38, 119, 123, 0.5); /* Corrige a sintaxe do border */
+  width: 100%; /* Garante que a linha se estenda de ponta a ponta */
+  margin: 0; /* Adiciona espaço acima e abaixo da linha, ajuste conforme necessário */
+}
+
+.social-icons {
+  margin-top: 30px; /* Adiciona margem superior para garantir que fiquem abaixo da bio */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 20px; /* Adiciona espaço entre os ícones */
+}
+
+.social-icons a {
+  color: #17494b; /* Cor dos ícones */
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #26787b;
+}
+
+/* Seção Sobre o Método */
+#method {
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+#method h2 {
+  text-align: center;
+  color: #26787b;
+  margin-bottom: 20px;
+}
+
+.method-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+/* Gradientes para os cards */
+.gradient1 {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+}
+
+.gradient2 {
+  background: linear-gradient(145deg, #cce5ff, #e6f7ff);
+}
+
+.gradient3 {
+  background: linear-gradient(145deg, #d9f2d9, #c2f0c2);
+}
+
+.gradient4 {
+  background: linear-gradient(145deg, #ffebcc, #ffe6b3);
+}
+
+.gradient5 {
+  background: linear-gradient(145deg, #ffcc99, #ffb366);
+}
+
+/* Seção Planos */
+#plans {
+  padding: 50px 20px;
+  background: #ffffff;
+}
+
+#plans h2 {
+  text-align: center;
+  color: #26787b;
+  margin-bottom: 20px;
+}
+
+.plans {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.plan-card {
+  background: #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+}
+
+.plan-prata {
+  background: #d0d0d0;
+}
+
+.plan-ouro {
+  background: #ffd700;
+}
+
+.plan-platinum {
+  background: #007bff;
+  /* Gradiente azul mais forte com prata */
+}
+
+/* Seção Hero */
+#hero {
+  padding: 50px 20px;
+  background: #26787b;
+  color: #fff;
+  text-align: center;
+}
+
+#hero h2 {
+  margin: 0;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+#hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebea6;
+}
+
+/* Seção Ebook */
+#ebook {
+  padding: 50px 20px;
+  background: #f4f4f4;
+  text-align: center; /* Centraliza todo o conteúdo da seção */
+}
+
+.ebook-container {
+  display: flex;
+  flex-direction: column; /* Coloca a imagem acima do texto */
+  align-items: center;
+  max-width: 600px; /* Define uma largura máxima */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.ebook-frame {
+  width: 180px;
+  height: 180px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: scaleUp 1s ease-in-out infinite;
+  margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.ebook-frame img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ebook-description {
+  text-align: center; /* Centraliza o texto */
+}
+
+.ebook-description h3 {
+  margin-top: 0;
+  color: #26787b;
+  font-size: 32px;
+}
+
+.ebook-description p {
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.scale-up-text {
+  display: inline-block; /* Garante que a animação funcione corretamente no texto */
+  animation: scaleUp 1s ease-in-out infinite;
+}
+
+.btn-ebook {
+  background: #25d366;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 50px; /* Espaço entre o texto e o botão */
+}
+
+.btn-ebook:hover {
+  background: #26787b;
+}
+
+/* Footer */
+footer {
+  background: #17494b;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animações */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 8px rgba(38, 119, 123, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(38, 119, 123, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 8px rgba(38, 119, 123, 0.5);
+  }
+}
+
+@keyframes pulseBorder {
+  0% {
+    transform: scale(1);
+    border-color: rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    border-color: rgba(0, 255, 0, 0.7);
+    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    border-color: rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container.bio {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-text {
+    padding: 10px;
+  }
+
+  .photo-frame {
+    width: 200px;
+    height: 200px;
+  }
+
+  .plans {
+    flex-direction: column;
+  }
+}
