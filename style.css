@@ -1,62 +1,45 @@
-/* ============================================================
-   GQD TEAM — APEX LUXE
-   Deep Green × Teal × Cream  |  Mobile-First
-   ============================================================ */
-
-/* ---- Design Tokens ---- */
 :root {
-  /* Dark palette — green-tinted */
   --ink:    #07100f;
   --ink-2:  #0b1614;
   --ink-3:  #111e1c;
   --card:   #0f1a18;
   --card-h: #152220;
 
-  /* Green accent (brand: #17494b / #26787b) */
   --amber:    #26787b;
   --amber-l:  #2e9296;
   --amber-d:  rgba(38, 120, 123, 0.10);
   --amber-b:  rgba(38, 120, 123, 0.28);
 
-  /* Cream / light surfaces */
   --cream:    #f5f2eb;
   --cream-2:  #ece8df;
-  --cream-c:  #1a1612;   /* text on cream */
-  --cream-m:  #7a7060;   /* muted text on cream */
+  --cream-c:  #1a1612;  
+  --cream-m:  #7a7060;
 
-  /* Text on dark */
   --t0: #f5f0e6;
   --t1: #8a8070;
   --t2: #4a4540;
 
-  /* Borders */
   --b0: rgba(255, 255, 255, 0.06);
   --b1: rgba(255, 255, 255, 0.10);
 
-  /* Plan tier colors */
   --silver: #b8c8d8;
   --gold:   #e8a020;
   --plat:   #90b8e0;
 
-  /* Typography */
   --fd: 'Syne', sans-serif;
   --fb: 'Plus Jakarta Sans', sans-serif;
 
-  /* Radii */
   --r1: 8px;
   --r2: 14px;
   --r3: 20px;
 
-  /* Motion */
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --t-fast: 0.2s;
   --t-med: 0.35s;
 
-  /* Section padding — scales with viewport */
   --sp: clamp(64px, 10vw, 120px);
 }
 
-/* ---- Reset ---- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
@@ -70,7 +53,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Grain texture — fixed so it doesn't repaint on scroll */
 body::before {
   content: '';
   position: fixed;
@@ -87,14 +69,12 @@ img { display: block; max-width: 100%; }
 a   { text-decoration: none; }
 ul  { list-style: none; }
 
-/* ---- Layout wrapper ---- */
 .wrap {
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 clamp(20px, 5vw, 48px);
 }
 
-/* ---- Typography helpers ---- */
 .label {
   display: inline-block;
   font-family: var(--fd);
@@ -125,7 +105,6 @@ h2 mark { background: none; color: var(--amber); }
   margin-top: -4px;
 }
 
-/* ---- Buttons ---- */
 .btn-amber {
   display: inline-flex;
   align-items: center;
@@ -146,7 +125,7 @@ h2 mark { background: none; color: var(--amber); }
 .btn-amber:hover {
   background: var(--amber-l);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(232, 160, 32, 0.42);
+  box-shadow: 0 8px 28px rgba(38, 120, 123, 0.42);
 }
 
 .btn-ghost {
@@ -167,7 +146,6 @@ h2 mark { background: none; color: var(--amber); }
   border-color: var(--amber);
 }
 
-/* ---- Reveal animation ---- */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -179,21 +157,19 @@ h2 mark { background: none; color: var(--amber); }
   transform: translateY(0);
 }
 
-/* ============================================================
-   HEADER
-   ============================================================ */
-
 #header {
   position: fixed;
-  inset-inline: 0;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 200;
   padding: 20px 0;
   transition: background var(--t-med), padding var(--t-med), box-shadow var(--t-med);
 }
 
 #header.solid {
-  background: rgba(10, 9, 7, 0.96);
+  background: rgba(7, 16, 15, 0.96);
   backdrop-filter: blur(22px);
   -webkit-backdrop-filter: blur(22px);
   box-shadow: 0 1px 0 var(--b0);
@@ -268,7 +244,7 @@ h2 mark { background: none; color: var(--amber); }
 .nav-cta:hover {
   background: var(--amber-l);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(232, 160, 32, 0.38);
+  box-shadow: 0 4px 16px rgba(38, 120, 123, 0.38);
 }
 
 /* Hamburger */
@@ -296,10 +272,6 @@ h2 mark { background: none; color: var(--amber); }
 .burger.x span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .burger.x span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* ============================================================
-   HERO
-   ============================================================ */
-
 #hero {
   min-height: 100svh;
   display: flex;
@@ -311,7 +283,6 @@ h2 mark { background: none; color: var(--amber); }
   overflow: hidden;
 }
 
-/* Radial green glow top-right */
 #hero::after {
   content: '';
   position: absolute;
@@ -335,7 +306,6 @@ h2 mark { background: none; color: var(--amber); }
   z-index: 1;
 }
 
-/* Badge */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -367,7 +337,6 @@ h2 mark { background: none; color: var(--amber); }
   50%       { opacity: 0.2; transform: scale(0.75); }
 }
 
-/* Headline */
 .hero-title {
   font-family: var(--fd);
   font-weight: 800;
@@ -408,7 +377,6 @@ h2 mark { background: none; color: var(--amber); }
   flex-wrap: wrap;
 }
 
-/* Hero visual: pill photo + floating badges */
 .hero-visual {
   position: relative;
   width: fit-content;
@@ -433,7 +401,6 @@ h2 mark { background: none; color: var(--amber); }
   object-position: top center;
 }
 
-/* Floating badges */
 .float-badge {
   position: absolute;
   display: flex;
@@ -479,10 +446,6 @@ h2 mark { background: none; color: var(--amber); }
   transform: rotate(4deg);
 }
 
-/* ============================================================
-   TICKER
-   ============================================================ */
-
 .ticker {
   background: #17494b;
   padding: 13px 0;
@@ -514,10 +477,6 @@ h2 mark { background: none; color: var(--amber); }
   to   { transform: translateX(-50%); }
 }
 
-/* ============================================================
-   ABOUT  (cream section)
-   ============================================================ */
-
 .cream {
   background: var(--cream);
   color: var(--cream-c);
@@ -527,7 +486,6 @@ h2 mark { background: none; color: var(--amber); }
   padding: var(--sp) 0;
 }
 
-/* Override label + headings on cream */
 #about .label    { color: var(--amber); }
 #about h2        { color: var(--cream-c); }
 #about h2 mark   { color: var(--amber); background: none; }
@@ -538,7 +496,6 @@ h2 mark { background: none; color: var(--amber); }
   gap: clamp(40px, 6vw, 64px);
 }
 
-/* Credentials list */
 .creds {
   display: flex;
   flex-direction: column;
@@ -586,7 +543,6 @@ h2 mark { background: none; color: var(--amber); }
   margin-top: 2px;
 }
 
-/* Social icons on cream */
 .socials {
   display: flex;
   gap: 10px;
@@ -608,11 +564,10 @@ h2 mark { background: none; color: var(--amber); }
 
 .socials a:hover {
   color: var(--amber);
-  box-shadow: 0 4px 16px rgba(232, 160, 32, 0.22);
+  box-shadow: 0 4px 16px rgba(38, 120, 123, 0.22);
   transform: translateY(-2px);
 }
 
-/* Bio text on cream */
 .about-body h2  { margin-bottom: 20px; }
 
 .about-body p {
@@ -633,10 +588,6 @@ h2 mark { background: none; color: var(--amber); }
   margin-top: 20px;
   line-height: 1.7;
 }
-
-/* ============================================================
-   METHOD  (dark)
-   ============================================================ */
 
 #method {
   padding: var(--sp) 0;
@@ -659,7 +610,6 @@ h2 mark { background: none; color: var(--amber); }
   transition: border-color var(--t-fast), transform var(--t-fast), box-shadow var(--t-fast);
 }
 
-/* Bottom accent line on hover */
 .m-card::after {
   content: '';
   position: absolute;
@@ -682,7 +632,6 @@ h2 mark { background: none; color: var(--amber); }
 
 .m-card:hover::after { transform: scaleX(1); }
 
-/* Ghost number */
 .m-card .n {
   position: absolute;
   top: 12px;
@@ -690,14 +639,14 @@ h2 mark { background: none; color: var(--amber); }
   font-family: var(--fd);
   font-size: 3.8rem;
   font-weight: 800;
-  color: rgba(232, 160, 32, 0.05);
+  color: rgba(38, 120, 123, 0.05);
   line-height: 1;
   pointer-events: none;
   letter-spacing: -2px;
   transition: color var(--t-fast);
 }
 
-.m-card:hover .n { color: rgba(232, 160, 32, 0.10); }
+.m-card:hover .n { color: rgba(38, 120, 123, 0.10); }
 
 .m-card > i {
   font-size: 24px;
@@ -722,15 +671,10 @@ h2 mark { background: none; color: var(--amber); }
   line-height: 1.8;
 }
 
-/* ============================================================
-   PLANS  (cream bg with dark cards)
-   ============================================================ */
-
 #plans {
   padding: var(--sp) 0;
 }
 
-/* Override headings on cream */
 #plans .section-head h2     { color: var(--cream-c); }
 #plans .section-head h2 mark { color: var(--amber); background: none; }
 #plans .section-head .label  { color: var(--amber); }
@@ -752,7 +696,6 @@ h2 mark { background: none; color: var(--amber); }
   position: relative;
   overflow: hidden;
   border: 1px solid var(--b0);
-  /* Warm shadow bridges dark card on cream bg */
   box-shadow: 0 8px 40px rgba(26, 22, 18, 0.16), 0 2px 8px rgba(26, 22, 18, 0.10);
   transition: transform var(--t-fast), box-shadow var(--t-fast);
 }
@@ -762,18 +705,15 @@ h2 mark { background: none; color: var(--amber); }
   box-shadow: 0 20px 56px rgba(26, 22, 18, 0.22), 0 4px 16px rgba(26, 22, 18, 0.12);
 }
 
-/* Tier top border */
 .p-card.silver { border-top: 3px solid var(--silver); }
 .p-card.gold   { border-top: 3px solid var(--gold); }
 .p-card.plat   { border-top: 3px solid var(--plat); }
 
-/* Featured (ouro) */
 .p-card.featured {
   border-color: var(--amber-b);
-  box-shadow: 0 8px 40px rgba(26, 22, 18, 0.18), 0 0 40px rgba(232, 160, 32, 0.10);
+  box-shadow: 0 8px 40px rgba(26, 22, 18, 0.18), 0 0 40px rgba(38, 120, 123, 0.10);
 }
 
-/* Popular tag */
 .p-tag {
   position: absolute;
   top: 0;
@@ -789,7 +729,6 @@ h2 mark { background: none; color: var(--amber); }
   border-radius: 0 0 8px 8px;
 }
 
-/* Card title */
 .p-card h3 {
   font-family: var(--fd);
   font-size: 1.9rem;
@@ -895,7 +834,7 @@ h2 mark { background: none; color: var(--amber); }
   background: var(--amber-l);
   border-color: var(--amber-l);
   color: #fff;
-  box-shadow: 0 4px 20px rgba(232, 160, 32, 0.42);
+  box-shadow: 0 4px 20px rgba(38, 120, 123, 0.42);
 }
 
 /* ============================================================
@@ -1034,7 +973,7 @@ h2 mark { background: none; color: var(--amber); }
 .cta-btn:hover {
   background: var(--amber-l);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(232, 160, 32, 0.5);
+  box-shadow: 0 12px 40px rgba(38, 120, 123, 0.5);
 }
 
 /* ============================================================
@@ -1159,8 +1098,8 @@ footer a:hover { color: var(--amber); }
     align-items: stretch;
     position: absolute;
     top: 100%;
-    inset-inline: 0;
-    background: rgba(10, 9, 7, 0.97);
+    left: 0; right: 0;
+    background: rgba(7, 16, 15, 0.97);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-top: 1px solid var(--b0);
