@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  document.getElementById("footer-year").textContent = new Date().getFullYear();
+
   const header = document.getElementById("header");
   const burger = document.getElementById("burger");
   const nav    = document.getElementById("nav");
