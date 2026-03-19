@@ -802,7 +802,6 @@ h2 mark { background: none; color: var(--amber); }
   flex-shrink: 0;
 }
 
-/* Plan buttons */
 .p-btn {
   display: block;
   text-align: center;
@@ -836,10 +835,6 @@ h2 mark { background: none; color: var(--amber); }
   color: #fff;
   box-shadow: 0 4px 20px rgba(38, 120, 123, 0.42);
 }
-
-/* ============================================================
-   EBOOK  (dark)
-   ============================================================ */
 
 #ebook {
   padding: var(--sp) 0;
@@ -912,10 +907,6 @@ h2 mark { background: none; color: var(--amber); }
   line-height: 1;
 }
 
-/* ============================================================
-   CTA
-   ============================================================ */
-
 #cta {
   padding: clamp(64px, 10vw, 100px) 0;
   background: var(--ink-2);
@@ -976,10 +967,6 @@ h2 mark { background: none; color: var(--amber); }
   box-shadow: 0 12px 40px rgba(38, 120, 123, 0.5);
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
-
 footer {
   background: #050403;
   border-top: 1px solid var(--b0);
@@ -1025,10 +1012,6 @@ footer a {
 
 footer a:hover { color: var(--amber); }
 
-/* ============================================================
-   RESPONSIVE — Tablet (768px+)
-   ============================================================ */
-
 @media (min-width: 768px) {
 
   .hero-inner {
@@ -1062,10 +1045,6 @@ footer a:hover { color: var(--amber); }
 
 }
 
-/* ============================================================
-   RESPONSIVE — Desktop (1024px+)
-   ============================================================ */
-
 @media (min-width: 1024px) {
 
   .method-grid {
@@ -1077,16 +1056,11 @@ footer a:hover { color: var(--amber); }
     height: 380px;
   }
 
-  /* Featured plan: slightly taller to stand out */
   .p-card.featured {
     padding-top: 44px;
   }
 
 }
-
-/* ============================================================
-   MOBILE NAV  (< 1024px)
-   ============================================================ */
 
 @media (max-width: 1023px) {
 
@@ -1125,10 +1099,6 @@ footer a:hover { color: var(--amber); }
   }
 
 }
-
-/* ============================================================
-   SMALL PHONES  (< 480px)
-   ============================================================ */
 
 @media (max-width: 479px) {
 
