@@ -33,13 +33,13 @@ gqd-team/
 
 ## Design
 
-**Apex Luxe** — Preto quente × Âmbar dourado × Creme
+**Apex Luxe** — Verde escuro × Teal × Creme
 
 - **Fontes:** [Syne](https://fonts.google.com/specimen/Syne) (display) + [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (body)
-- **Paleta:** `#0a0907` (fundo) · `#e8a020` (âmbar) · `#f5f2eb` (creme)
+- **Paleta principal:** `#07100f` (fundo) · `#26787b` (verde acento) · `#17494b` (verde escuro) · `#f5f2eb` (creme)
 - **Ícones:** [Font Awesome 6](https://fontawesome.com/)
 - Seções com alternância dark/cream para ritmo visual
-- Textura grain via SVG para sensação premium
+- Textura grain via SVG (`position: fixed`) para sensação premium sem custo de repaint
 
 ## Funcionalidades
 
