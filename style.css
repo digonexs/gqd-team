@@ -1,22 +1,22 @@
 /* ============================================================
    GQD TEAM — APEX LUXE
-   Warm Black × Amber Gold × Cream  |  Mobile-First
+   Deep Green × Teal × Cream  |  Mobile-First
    ============================================================ */
 
 /* ---- Design Tokens ---- */
 :root {
-  /* Warm dark palette */
-  --ink:    #0a0907;
-  --ink-2:  #111009;
-  --ink-3:  #1a1815;
-  --card:   #161410;
-  --card-h: #1e1c17;
+  /* Dark palette — green-tinted */
+  --ink:    #07100f;
+  --ink-2:  #0b1614;
+  --ink-3:  #111e1c;
+  --card:   #0f1a18;
+  --card-h: #152220;
 
-  /* Amber accent */
-  --amber:    #e8a020;
-  --amber-l:  #f5bc42;
-  --amber-d:  rgba(232, 160, 32, 0.10);
-  --amber-b:  rgba(232, 160, 32, 0.25);
+  /* Green accent (brand: #17494b / #26787b) */
+  --amber:    #26787b;
+  --amber-l:  #2e9296;
+  --amber-d:  rgba(38, 120, 123, 0.10);
+  --amber-b:  rgba(38, 120, 123, 0.28);
 
   /* Cream / light surfaces */
   --cream:    #f5f2eb;
@@ -131,7 +131,7 @@ h2 mark { background: none; color: var(--amber); }
   align-items: center;
   gap: 10px;
   background: var(--amber);
-  color: var(--ink);
+  color: #fff;
   font-family: var(--fd);
   font-size: 14px;
   font-weight: 700;
@@ -254,7 +254,7 @@ h2 mark { background: none; color: var(--amber); }
   align-items: center;
   gap: 8px;
   background: var(--amber);
-  color: var(--ink);
+  color: #fff;
   font-family: var(--fd);
   font-size: 12px;
   font-weight: 700;
@@ -311,7 +311,7 @@ h2 mark { background: none; color: var(--amber); }
   overflow: hidden;
 }
 
-/* Radial warm glow top-right */
+/* Radial green glow top-right */
 #hero::after {
   content: '';
   position: absolute;
@@ -319,7 +319,7 @@ h2 mark { background: none; color: var(--amber); }
   right: -5%;
   width: 60%;
   height: 80%;
-  background: radial-gradient(ellipse at top right, rgba(232, 160, 32, 0.09) 0%, transparent 62%);
+  background: radial-gradient(ellipse at top right, rgba(38, 120, 123, 0.12) 0%, transparent 62%);
   pointer-events: none;
 }
 
@@ -422,7 +422,7 @@ h2 mark { background: none; color: var(--amber); }
   overflow: hidden;
   border: 2px solid var(--amber-b);
   box-shadow:
-    0 0 60px rgba(232, 160, 32, 0.12),
+    0 0 60px rgba(38, 120, 123, 0.18),
     0 32px 80px rgba(0, 0, 0, 0.65);
 }
 
@@ -464,7 +464,7 @@ h2 mark { background: none; color: var(--amber); }
 
 .fb-1 {
   background: var(--amber);
-  color: var(--ink);
+  color: #fff;
   bottom: 22px;
   left: -14px;
   transform: rotate(-4deg);
@@ -484,7 +484,7 @@ h2 mark { background: none; color: var(--amber); }
    ============================================================ */
 
 .ticker {
-  background: var(--amber);
+  background: #17494b;
   padding: 13px 0;
   overflow: hidden;
 }
@@ -501,7 +501,7 @@ h2 mark { background: none; color: var(--amber); }
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--ink);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .ticker-track .sep {
@@ -779,7 +779,7 @@ h2 mark { background: none; color: var(--amber); }
   top: 0;
   right: 22px;
   background: var(--amber);
-  color: var(--ink);
+  color: #fff;
   font-family: var(--fd);
   font-size: 10px;
   font-weight: 700;
@@ -887,14 +887,14 @@ h2 mark { background: none; color: var(--amber); }
 
 .amber-btn {
   background: var(--amber);
-  color: var(--ink);
+  color: #fff;
   border-color: var(--amber);
 }
 
 .amber-btn:hover {
   background: var(--amber-l);
   border-color: var(--amber-l);
-  color: var(--ink);
+  color: #fff;
   box-shadow: 0 4px 20px rgba(232, 160, 32, 0.42);
 }
 
@@ -923,7 +923,7 @@ h2 mark { background: none; color: var(--amber); }
   width: clamp(160px, 40vw, 240px);
   border-radius: var(--r2);
   box-shadow:
-    0 0 48px rgba(232, 160, 32, 0.12),
+    0 0 48px rgba(38, 120, 123, 0.18),
     0 24px 64px rgba(0, 0, 0, 0.7);
   transition: transform var(--t-med) var(--ease);
 }
@@ -991,7 +991,7 @@ h2 mark { background: none; color: var(--amber); }
   transform: translate(-50%, -50%);
   width: min(700px, 90vw);
   height: 280px;
-  background: radial-gradient(ellipse at center, rgba(232, 160, 32, 0.13) 0%, transparent 68%);
+  background: radial-gradient(ellipse at center, rgba(38, 120, 123, 0.18) 0%, transparent 68%);
   pointer-events: none;
 }
 
@@ -1021,7 +1021,7 @@ h2 mark { background: none; color: var(--amber); }
   align-items: center;
   gap: 12px;
   background: var(--amber);
-  color: var(--ink);
+  color: #fff;
   font-family: var(--fd);
   font-size: 16px;
   font-weight: 700;
