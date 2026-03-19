@@ -1,49 +1,112 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const elements = document.querySelectorAll(".fade-in");
+document.addEventListener("DOMContentLoaded", () => {
 
-  const observer = new IntersectionObserver((entries) => {
+  const header = document.getElementById("header");
+  const burger = document.getElementById("burger");
+  const nav    = document.getElementById("nav");
+
+  // =============================================
+  // Reveal on scroll via IntersectionObserver
+  // =============================================
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
+      if (!entry.isIntersecting) return;
+      const delay = parseInt(entry.target.dataset.d || "0", 10);
+      setTimeout(() => entry.target.classList.add("in"), delay);
+      revealObserver.unobserve(entry.target);
     });
+  }, {
+    threshold: 0.08,
+    rootMargin: "0px 0px -40px 0px",
   });
 
-  elements.forEach((element) => {
-    observer.observe(element);
+  document.querySelectorAll(".reveal").forEach((el) => {
+    // Hero elements animate on load, not scroll
+    if (el.closest("#hero")) {
+      const d = parseInt(el.dataset.d || "0", 10);
+      setTimeout(() => el.classList.add("in"), d + 80);
+    } else {
+      revealObserver.observe(el);
+    }
   });
 
-  window.addEventListener("scroll", () => {
-    document.querySelectorAll(".fade-in").forEach((el) => {
-      if (el.getBoundingClientRect().top < window.innerHeight) {
-        el.classList.add("visible");
-      }
+  // =============================================
+  // Header: compact + background on scroll
+  // =============================================
+  const handleScroll = () => {
+    header.classList.toggle("solid", window.scrollY > 40);
+    updateActiveNav();
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  // =============================================
+  // Active nav link tracking
+  // =============================================
+  const sections = Array.from(document.querySelectorAll("section[id]"));
+
+  function updateActiveNav() {
+    const scrollY = window.scrollY + header.offsetHeight + 60;
+    let current = "";
+    sections.forEach((s) => {
+      if (scrollY >= s.offsetTop) current = s.id;
     });
-  });
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.classList.toggle("on", link.getAttribute("href") === `#${current}`);
+    });
+  }
 
-  document.querySelectorAll("nav ul li a").forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
+  // =============================================
+  // Smooth scroll for all anchor links
+  // =============================================
+  document.querySelectorAll("a[href^='#']").forEach((anchor) => {
+    anchor.addEventListener("click", (e) => {
+      const href = anchor.getAttribute("href");
+      if (href === "#") return;
+      const target = document.querySelector(href);
+      if (!target) return;
       e.preventDefault();
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-      if (targetId === "#plans") {
-        const offset = 50;
-        window.scrollTo({
-          top: targetElement.offsetTop - offset,
-          behavior: "smooth",
-        });
-      } else {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
+      const offset = header.offsetHeight;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: "smooth" });
+      closeMobileNav();
     });
   });
 
-  // Menu Hambúrguer
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navMenu = document.querySelector("nav");
+  // =============================================
+  // Mobile menu
+  // =============================================
+  function closeMobileNav() {
+    nav.classList.remove("open");
+    burger.classList.remove("x");
+  }
 
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("menu-open");
-    menuToggle.classList.toggle("active"); // Adiciona animação ao botão
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("open");
+    burger.classList.toggle("x");
   });
+
+  // Close when clicking outside the header
+  document.addEventListener("click", (e) => {
+    if (!header.contains(e.target) && nav.classList.contains("open")) {
+      closeMobileNav();
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMobileNav();
+  });
+
+  // =============================================
+  // Ticker: pause on hover for accessibility
+  // =============================================
+  const tickerTrack = document.querySelector(".ticker-track");
+  if (tickerTrack) {
+    tickerTrack.parentElement.addEventListener("mouseenter", () => {
+      tickerTrack.style.animationPlayState = "paused";
+    });
+    tickerTrack.parentElement.addEventListener("mouseleave", () => {
+      tickerTrack.style.animationPlayState = "running";
+    });
+  }
+
 });

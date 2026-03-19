@@ -4,133 +4,304 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GQD Team</title>
+  <title>GQD Team — Mentoria de Alta Performance</title>
+  <link rel="icon" href="./assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="./assets/logo.svg" type="image/png">
 </head>
 
 <body>
-  <header>
-    <h1><img src="./assets/logo.svg" alt="Logo"> GQD Team</h1>
-    <div class="menu-toggle">
-      <div></div>
-      <div></div>
-      <div></div>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#hero" class="logo">
+        <img src="./assets/logo.svg" alt="GQD">
+        <span>GQD Team</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav">
+        <a href="#about"  class="nav-link">Sobre Mim</a>
+        <a href="#method" class="nav-link">Método</a>
+        <a href="#plans"  class="nav-link">Planos</a>
+        <a href="#ebook"  class="nav-link">Ebook</a>
+        <a href="https://wa.me/+5516996332689" class="nav-cta" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contato
+        </a>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#about">Sobre Mim</a></li>
-        <li><a href="#method">Método</a></li>
-        <li><a href="#plans">Planos</a></li>
-        <li><a href="#ebook">Ebook</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <section id="about">
-    <div class="abstract-background"></div>
-    <div class="container bio">
-      <div class="photo-frame">
-        <img src="./assets/perfil-gqd.jpg" alt="Gabriel Quintério Dilella">
-      </div>
-      <div class="bio-text">
-        <h2>Sobre Mim</h2>
-        <p><span class="highlight">Meu nome é Gabriel Quintério Dilella</span> e sou o criador do GQD Team. Aos 26 anos, trago comigo uma vasta experiência e uma paixão inabalável pelos esportes e pelo desenvolvimento físico, cultivada desde os meus 14 anos, quando comecei a treinar musculação.</p>
-        <p>Minha jornada acadêmica me levou a conquistar uma <span class="highlight">graduação em Ciências do Esporte pela UNICAMP e uma pós-graduação em Ciência do Treinamento de Força pela UFSCAR. Além disso, sou especialista em biomecânica e posturologia</span>, áreas que me permitem entender profundamente o movimento humano e otimizar o desempenho físico de meus alunos.</p>
-        <p>Atualmente, dedico a maior parte do meu tempo como mentor, oferecendo suporte online de qualidade para meus alunos. Com uma abordagem personalizada e baseada em evidências, tenho tido o privilégio de orientar <span class="highlight">mais de 250 alunos ao redor do mundo</span>, ajudando-os a alcançar seus objetivos de forma eficiente e segura.</p>
-        <p><span class="highlight">Além disso</span>, sou massoterapeuta manual certificado, o que me possibilita integrar técnicas de massagem terapêutica aos meus programas de treinamento, promovendo recuperação e bem-estar de maneira holística.</p>
-        <p><span class="highlight">Minha missão é transformar vidas</span> através do esporte e da educação física, proporcionando a cada aluno as ferramentas necessárias para alcançar o seu máximo potencial. No GQD Team, acredito que cada jornada é única e merece ser tratada com dedicação e excelência.</p>
-      </div>
-    </div>
-    <h2 id="title-social">Me acompanhe nas Redes</h2>
-    <div class="line"></div>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/gqd.team/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/@gabrieldilella7229" class="social-icon" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://wa.me/+5516996332689" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="mailto:gabrieldilella@gmail.com" class="social-icon" target="_blank"><i class="fas fa-envelope"></i></a>
-    </div>
-  </section>
-
-  <section id="method">
-    <div class="container">
-      <h2>Sobre o Método GQD</h2>
-      <div class="method-cards">
-        <div class="card gradient1 fade-in">
-          <i class="fas fa-dumbbell card-icon"></i>
-          <h3>Benefício GQD</h3>
-          <p>O método GQD é o resultado de anos de estudo, prática e dedicação ao esporte e à ciência do treinamento físico.</p>
-        </div>
-        <div class="card gradient2 fade-in">
-          <i class="fas fa-brain card-icon"></i>
-          <h3>Benefício GQD</h3>
-          <p>Cada protocolo de treino que desenvolvo é rigorosamente testado em mim mesmo antes de ser aplicado aos meus alunos.</p>
-        </div>
-        <div class="card gradient3 fade-in">
-          <i class="fas fa-chart-line card-icon"></i>
-          <h3>Benefício GQD</h3>
-          <p>O maior objetivo do método GQD é alcançar resultados que vão além da estética.</p>
-        </div>
-        <div class="card gradient4 fade-in">
-          <i class="fas fa-running card-icon"></i>
-          <h3>Benefício GQD</h3>
-          <p>Abordagem personalizada e baseada em evidências, oferecendo suporte contínuo.</p>
-        </div>
-        <div class="card gradient5 fade-in">
-          <i class="fas fa-medal card-icon"></i>
-          <h3>Benefício GQD</h3>
-          <p>Atualização constante com base nas literaturas mais recentes e validadas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="plans">
-    <div class="container">
-      <h2>Planos</h2>
-      <div class="plans">
-        <div class="plan-card plan-prata">
-          <h3>Prata</h3>
-          <p>Acompaanhamento de <span class="highlight2">um mês</span> com protocolo de treino <span class="highlight2">PERSONALIZADO.</span></p>
-          <p><span class="highlight2">5 x R$ 46,99</span></p>
-        </div>
-        <div class="plan-card plan-ouro">
-          <h3>Ouro</h3>
-          <p>Acompaanhamento de <span class="highlight2">três meses</span> com protocolo de treino <span class="highlight2">PERSONALIZADO.</span></p>
-          <p><span class="highlight2">5 x R$ 128,99</span></p>
-        </div>
-        <div class="plan-card plan-platinum">
-          <h3>Platina</h3>
-          <p>Acompaanhamento de <span class="highlight2">seis meses</span> com protocolo de treino <span class="highlight2">PERSONALIZADO.</span></p>
-          <p><span class="highlight2">5 x R$ 245,99</span></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- HERO -->
   <section id="hero">
-    <h2>Mude sua vida e o seu corpo com o GQD Team!</h2>
-    <p>Comece hoje mesmo sua jornada de transformação!</p>
-    <a href="https://wa.me/+5516996332689" class="btn-whatsapp">Falar com Gabriel</a>
-  </section>
-
-  <section id="ebook">
-    <div class="container ebook-container">
-      <div class="ebook-frame">
-        <img src="./assets/ebook-gqd.webp" alt="Capa do Ebook">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="badge reveal" data-d="0">
+          <span class="dot"></span>Mentoria Online · Alta Performance
+        </div>
+        <h1 class="hero-title reveal" data-d="120">
+          <em>Transforme</em>
+          seu corpo.<br>
+          <span>Eleve seu nível.</span>
+        </h1>
+        <p class="hero-sub reveal" data-d="260">
+          Protocolo de treino 100% personalizado, baseado em ciência,
+          desenvolvido por quem treina e estuda na prática há mais de 12 anos.
+        </p>
+        <div class="hero-btns reveal" data-d="380">
+          <a href="https://wa.me/+5516996332689" class="btn-amber" target="_blank">
+            <i class="fab fa-whatsapp"></i> Começar Agora
+          </a>
+          <a href="#method" class="btn-ghost">Ver o Método</a>
+        </div>
       </div>
-      <div class="ebook-description">
-        <h3>Transforme sua vida com meu Ebook</h3>
-        <p><span class="highlight">A Base da Força: Mobilidade e Estabilidade para Membros Inferiores</span></p>
-        <p><span class="highlight scale-up-text"> 5 x de R$ 8,69</span></p>
-        <a href="https://pay.hotmart.com/M87193733A?sck=HOTMART_PRODUCT_PAGE&off=3ijpjm65&hotfeature=32&_gl=1*13cswnb*_gcl_au*MTM1ODcxNzU3NC4xNzIwMDUyMjUw*_ga*MTEyMzAxNjAwNi4xNzEyODg0NjYw*_ga_GQH2V1F11Q*MTcyMzEzMjQ4OC4zLjEuMTcyMzEzMzUwNC42MC4wLjA.&bid=1723133507664" class="btn-ebook" target="_blank">Comprar Agora</a>
+
+      <div class="hero-visual reveal" data-d="180">
+        <div class="pill-frame">
+          <img src="./assets/perfil-gqd.jpg" alt="Gabriel Quintério Dilella">
+        </div>
+        <div class="float-badge fb-1">
+          <strong>250+</strong>
+          <span>Alunos</span>
+        </div>
+        <div class="float-badge fb-2">
+          <strong>12+</strong>
+          <span>Anos</span>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>GQD Team</span><span class="sep">✦</span>
+      <span>Alta Performance</span><span class="sep">✦</span>
+      <span>250+ Alunos</span><span class="sep">✦</span>
+      <span>Treinamento Científico</span><span class="sep">✦</span>
+      <span>Resultados Reais</span><span class="sep">✦</span>
+      <span>100% Online</span><span class="sep">✦</span>
+      <span>UNICAMP · UFSCAR</span><span class="sep">✦</span>
+      <span>GQD Team</span><span class="sep">✦</span>
+      <span>Alta Performance</span><span class="sep">✦</span>
+      <span>250+ Alunos</span><span class="sep">✦</span>
+      <span>Treinamento Científico</span><span class="sep">✦</span>
+      <span>Resultados Reais</span><span class="sep">✦</span>
+      <span>100% Online</span><span class="sep">✦</span>
+      <span>UNICAMP · UFSCAR</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="cream">
+    <div class="wrap">
+      <div class="about-grid">
+        <aside class="about-aside reveal" data-d="0">
+          <div class="creds">
+            <div class="cred">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <strong>Ciências do Esporte</strong>
+                <span>Graduação · UNICAMP</span>
+              </div>
+            </div>
+            <div class="cred">
+              <i class="fas fa-flask"></i>
+              <div>
+                <strong>Ciência do Treinamento de Força</strong>
+                <span>Pós-graduação · UFSCAR</span>
+              </div>
+            </div>
+            <div class="cred">
+              <i class="fas fa-bone"></i>
+              <div>
+                <strong>Biomecânica & Posturologia</strong>
+                <span>Especialização</span>
+              </div>
+            </div>
+            <div class="cred">
+              <i class="fas fa-hands"></i>
+              <div>
+                <strong>Massoterapeuta Manual</strong>
+                <span>Certificado</span>
+              </div>
+            </div>
+          </div>
+          <div class="socials">
+            <a href="https://www.instagram.com/gqd.team/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@gabrieldilella7229" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/+5516996332689" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:gabrieldilella@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </aside>
+
+        <div class="about-body reveal" data-d="140">
+          <span class="label">Sobre Mim</span>
+          <h2>Gabriel Quintério <mark>Dilella</mark></h2>
+          <p>Criador do GQD Team e mentor de performance física online. Aos 26 anos, carrego mais de <strong>12 anos de experiência prática</strong> numa das áreas que mais amo — o treinamento de força.</p>
+          <p>Sou graduado em Ciências do Esporte pela <strong>UNICAMP</strong>, pós-graduado em Ciência do Treinamento de Força pela <strong>UFSCAR</strong> e especialista em Biomecânica e Posturologia.</p>
+          <p>Cada protocolo que entrego foi <strong>testado por mim mesmo</strong> antes de chegar ao meu aluno. Já orientei <strong>mais de 250 alunos ao redor do mundo</strong>, com abordagem personalizada, baseada em evidências e focada em eficiência real.</p>
+          <blockquote>No GQD Team, cada jornada é única. E cada jornada merece excelência.</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section id="method">
+    <div class="wrap">
+      <div class="section-head reveal" data-d="0">
+        <span class="label">Método GQD</span>
+        <h2>Por que o GQD <mark>funciona?</mark></h2>
+      </div>
+      <div class="method-grid">
+        <article class="m-card reveal" data-d="0">
+          <span class="n">01</span>
+          <i class="fas fa-dumbbell"></i>
+          <h3>Ciência Aplicada</h3>
+          <p>O método GQD une ciência do treinamento com execução real de alto nível — resultado de anos de estudo e prática.</p>
+        </article>
+        <article class="m-card reveal" data-d="80">
+          <span class="n">02</span>
+          <i class="fas fa-brain"></i>
+          <h3>Testado na Prática</h3>
+          <p>Cada protocolo é testado em mim mesmo antes de ser aplicado. Nada chega ao meu aluno sem passar pela minha própria execução.</p>
+        </article>
+        <article class="m-card reveal" data-d="160">
+          <span class="n">03</span>
+          <i class="fas fa-chart-line"></i>
+          <h3>Além da Estética</h3>
+          <p>Força, mobilidade, postura e longevidade. Treinar bem é sobre viver melhor — não apenas sobre parecer melhor.</p>
+        </article>
+        <article class="m-card reveal" data-d="240">
+          <span class="n">04</span>
+          <i class="fas fa-running"></i>
+          <h3>Suporte Contínuo</h3>
+          <p>Acompanhamento constante e personalizado. Você não está sozinho — estou presente em cada etapa da sua transformação.</p>
+        </article>
+        <article class="m-card reveal" data-d="320">
+          <span class="n">05</span>
+          <i class="fas fa-medal"></i>
+          <h3>Atualização Constante</h3>
+          <p>Baseado nas literaturas mais recentes e validadas. A ciência evolui — e o meu método também.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section id="plans" class="cream">
+    <div class="wrap">
+      <div class="section-head reveal" data-d="0">
+        <span class="label">Investimento</span>
+        <h2>Escolha seu <mark>Plano</mark></h2>
+        <p class="head-p">Protocolo 100% personalizado para sua realidade, seus objetivos e seu corpo.</p>
+      </div>
+      <div class="plans-grid">
+
+        <div class="p-card silver reveal" data-d="0">
+          <h3>Prata</h3>
+          <p class="p-dur">1 mês de acompanhamento</p>
+          <div class="p-price">
+            <span>5 parcelas de</span>
+            <strong>R$ 46,99</strong>
+          </div>
+          <ul>
+            <li>Protocolo personalizado</li>
+            <li>Suporte online</li>
+            <li>Baseado em evidências</li>
+          </ul>
+          <a href="https://wa.me/+5516996332689?text=Olá%20Gabriel,%20tenho%20interesse%20no%20Plano%20Prata!" target="_blank" class="p-btn">Começar →</a>
+        </div>
+
+        <div class="p-card gold featured reveal" data-d="100">
+          <div class="p-tag">Mais Popular</div>
+          <h3>Ouro</h3>
+          <p class="p-dur">3 meses de acompanhamento</p>
+          <div class="p-price">
+            <span>5 parcelas de</span>
+            <strong>R$ 128,99</strong>
+          </div>
+          <ul>
+            <li>Protocolo personalizado</li>
+            <li>Suporte prioritário</li>
+            <li>Ajustes mensais</li>
+            <li>Resultados consistentes</li>
+          </ul>
+          <a href="https://wa.me/+5516996332689?text=Olá%20Gabriel,%20tenho%20interesse%20no%20Plano%20Ouro!" target="_blank" class="p-btn amber-btn">Começar →</a>
+        </div>
+
+        <div class="p-card plat reveal" data-d="200">
+          <h3>Platina</h3>
+          <p class="p-dur">6 meses de acompanhamento</p>
+          <div class="p-price">
+            <span>5 parcelas de</span>
+            <strong>R$ 245,99</strong>
+          </div>
+          <ul>
+            <li>Protocolo personalizado</li>
+            <li>Suporte VIP</li>
+            <li>Revisões completas</li>
+            <li>Transformação total</li>
+          </ul>
+          <a href="https://wa.me/+5516996332689?text=Olá%20Gabriel,%20tenho%20interesse%20no%20Plano%20Platina!" target="_blank" class="p-btn">Começar →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EBOOK -->
+  <section id="ebook">
+    <div class="wrap">
+      <div class="ebook-grid">
+        <div class="ebook-cover reveal" data-d="0">
+          <img src="./assets/ebook-gqd.webp" alt="Ebook A Base da Força">
+        </div>
+        <div class="ebook-body reveal" data-d="160">
+          <span class="label">Produto Digital</span>
+          <h2>A Base da <mark>Força</mark></h2>
+          <p class="ebook-sub">Mobilidade e Estabilidade para Membros Inferiores</p>
+          <p>Um guia completo para construir a base que sustenta todo o seu treinamento. Mobilidade, estabilidade e força — do chão para cima.</p>
+          <div class="ebook-price">
+            <span>5 parcelas de</span>
+            <strong>R$ 8,69</strong>
+          </div>
+          <a href="https://pay.hotmart.com/M87193733A?sck=HOTMART_PRODUCT_PAGE&off=3ijpjm65&hotfeature=32&_gl=1*13cswnb*_gcl_au*MTM1ODcxNzU3NC4xNzIwMDUyMjUw*_ga*MTEyMzAxNjAwNi4xNzEyODg0NjYw*_ga_GQH2V1F11Q*MTcyMzEzMjQ4OC4zLjEuMTcyMzEzMzUwNC42MC4wLjA.&bid=1723133507664" class="btn-amber" target="_blank">
+            Adquirir Agora
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="cta-glow"></div>
+    <div class="wrap cta-body">
+      <h2 class="reveal" data-d="0">Pronto para sua <span>transformação?</span></h2>
+      <p class="reveal" data-d="100">Mais de 250 alunos já mudaram suas vidas. A próxima história pode ser a sua.</p>
+      <a href="https://wa.me/+5516996332689" class="cta-btn reveal" data-d="200" target="_blank">
+        <i class="fab fa-whatsapp"></i> Falar com Gabriel
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2024 GQD Team. Todos os direitos reservados. | Desenvolvido por <a href="https://www.linkedin.com/in/rodrigocavalcantedebarros/">Rodrigo</a></p>
+    <div class="footer-inner">
+      <div class="foot-brand">
+        <img src="./assets/logo.svg" alt="GQD">
+        <span>GQD Team</span>
+      </div>
+      <p>© 2024 GQD Team. Todos os direitos reservados.</p>
+      <p>Desenvolvido por <a href="https://www.linkedin.com/in/rodrigocavalcantedebarros/" target="_blank">Rodrigo</a></p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
